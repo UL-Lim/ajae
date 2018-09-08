@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>깔창 높이 계산기</title>
+</head>
+
+<body style="background-image:url('img/2.jpg');">
+	
+	<audio src="img/ajae.mp3" autoplay controls></audio>
+	
+	<div id="title" style="width: 400px; height: 20px; background-image: url('img/1.jpg'); background-size:cover; color: yellow; text-align: center; line-height: 20px; margin: 0 auto; margin-top:60px; margin-bottom:10px;"><font style="font-weight: bolder">▤ 깔창 높이 계산기 ▤</font></div>
+	
+	
+	<div id="input" style="width: 400px; height: 70px; text-align: center;margin: 0 auto;">
+		
+	<div id="box" style="width: 220px; height: 70px; color: black; text-align: left;  line-height: 30px;margin-left: 70px;float:left;">
+		
+	<input type="text" placeholder="신발 사이즈를 입력해주세요" size="22" id="shoeSize"> mm <br>
+	
+	
+	<input type="text" placeholder="발가락 길이를 입력해주세요" size="22" id="toeLength"> mm
+		
+	</div>
+		
+	<div id="but1" style="width: 50px; height: 35px; text-align: left;  line-height: 30px;margin: 0 auto;float:left;">	
+		
+	<button id="but" style="margin-top:23px;">계싼!</button>
+		
+	</div>
+	</div>
+	
+	<div id="output" style="width: 400px; height: 180px; background: yellow; color: green; text-align: center; line-height: 180px;margin: 0 auto;">나에게 맞는 깔창 높이는?</div>
+	
+	<div id="ajae1" style="width: 400px; height: 50px; color:yellow; text-align: center; line-height: 50px;margin: 0 auto;"><font style="font-size:18pt; font-weight:bolder;">*건강이 최고의 재산이다*</font></div>
+	
+	<div id="ajae2" style="width: 400px; height: 50px; color:greenyellow; text-align: center; line-height: 25px;margin: 0 auto; margin-top:10px;">
+	너무 높은 깔창을 사용하면...<br><br>몸의 무게 中心을 바로잡기 위해 腰椎 뒤쪽이 눌려 허리 痛症이 유발됩니다. 뿐만 아니라 자세가 불안해져 빙판이 많은 겨울철에는 조금만 中心을 잃어도 落傷事故를 당할 수 있습니다.</div>
+	
+
+	<script type="text/javascript">
+		
+		but.onclick = function(){
+
+			var insoleHeight = (shoeSize.value - toeLength.value)*0.0176;
+			var finalOutput = insoleHeight.toFixed(1) + "cm 이하의 깔창을 사용합시다^^";
+		
+			output.innerHTML = finalOutput;
+		}
+		
+		
+	</script>
+</body>
+</html>
